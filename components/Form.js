@@ -67,7 +67,6 @@ const Form = ({ buttonText }) => {
 											message: 'Provide valid email address',
 										},
 									})}
-									autoFocus
 									className='input 
 		placeholder-gray-400 box-border w-full h-[64px] px-6 border-0 border-l border-r border-t mb-0 
 		font-ui text-base align-middle bg-white transition 
