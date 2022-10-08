@@ -27,8 +27,8 @@ export default function Home() {
 							<div className='wrapper break-words text-center text-textColor '>
 								<h2 className='text-2xl  '>
 									<strong>
-										"Mit diesen Vorlagen haben wir unsere Community auf 2.500 aktive
-										Mitglieder in nur 6 Monaten skaliert"
+										Mit diesen Vorlagen haben wir unsere Community auf 2.500 aktive
+										Mitglieder in nur 6 Monaten skaliert
 									</strong>
 								</h2>
 							</div>
