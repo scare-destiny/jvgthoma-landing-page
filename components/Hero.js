@@ -1,10 +1,15 @@
 import Image from 'next/image'
-import image from '/Users/zhenavenger/Programming and TCCC/Projects/Patrick/jvgthoma-landing/public/solar-plant.jpg'
 
-const Hero = () => {
+const Hero = ({ image, width, height }) => {
 	return (
-		<div className='w-full'>
-			<Image src={image} alt='logo' />
+		<div className='mx-auto max-w-md sm:max-w-xl w-full md:max-w-3xl p-6  sm:py-6 md:px-20 md:py-10'>
+			<Image
+				src={image}
+				alt='logo'
+				layout='responsive'
+				width={width}
+				height={height}
+			/>
 		</div>
 	)
 }
