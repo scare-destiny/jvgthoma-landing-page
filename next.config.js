@@ -3,7 +3,11 @@ const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
 	images: {
-		domains: ['perspective.imgix.net', 'images.unsplash.com'],
+		domains: [
+			'perspective.imgix.net',
+			'images.unsplash.com',
+			'www.pvknowhow.com',
+		],
 	},
 }
 

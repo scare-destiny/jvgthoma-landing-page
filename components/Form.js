@@ -24,10 +24,7 @@ const Form = ({ buttonText }) => {
 								<div>
 									<div className='wrapper max-w-md sm:max-w-xl w-full md:max-w-3xl lg:max-w-4xl text-center'>
 										<h4 className='text-l'></h4>
-										Melde dich zum Newsletter an und erhalte{' '}
-										<strong>
-											kostenlosen Zugriff auf unser exklusives Community-Bundle.
-										</strong>
+										Start now for free
 									</div>
 								</div>
 							</div>
