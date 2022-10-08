@@ -22,7 +22,7 @@ export default function Home() {
 			<main className='w-full '>
 				<Hero image={image} width='1200' height='634' priority />
 				<div className='content'>
-					<div className='w-full border-box pt-6 pl-4 pr-4 pb-2'>
+					<div className='w-full border-box  pl-2 pr-2 '>
 						<div className='mx-auto max-w-xl'>
 							<div className='wrapper break-words text-center text-textColor '>
 								<h2 className='text-2xl  '>
