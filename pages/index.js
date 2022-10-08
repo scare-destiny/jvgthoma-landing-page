@@ -26,7 +26,7 @@ export default function Home() {
 					image='https://www.pvknowhow.com/wp-content/uploads/2019/08/solar-cell-4045029_1920-e1623041372880.jpg'
 					width='1200'
 					height='634'
-					priority
+					priority='true'
 				/>
 				<div className='content'>
 					<div className='w-full border-box  pl-2 pr-2 '>
