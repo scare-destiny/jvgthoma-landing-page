@@ -9,7 +9,7 @@ import {
 	SectionTitle,
 	About,
 } from '../components/index.js'
-import image from './public/solar-plant.jpg'
+import image from '../public/solar-plant.jpg'
 
 export default function Home() {
 	return (
@@ -20,7 +20,7 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<main className='w-full '>
-				<Hero image={image} width='1200' height='634' />
+				<Hero image={image} width='1200' height='634' priority />
 				<div className='content'>
 					<Heading
 						text='Mit diesen Vorlagen haben wir unsere Community auf 2.500 aktive Mitglieder
