@@ -9,7 +9,7 @@ import {
 	SectionTitle,
 	About,
 } from '../components/index.js'
-import image from '/Users/zhenavenger/Programming and TCCC/Projects/Patrick/jvgthoma-landing/public/solar-plant.jpg'
+import image from './public/solar-plant.jpg'
 
 export default function Home() {
 	return (
