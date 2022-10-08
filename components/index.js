@@ -1,4 +1,5 @@
 import Feature from './Feature'
+import Form from './Form'
 
 export { default as CookieBanner } from './CookieBanner'
 export { default as Hero } from './Hero'
@@ -15,3 +16,4 @@ export { default as Footer } from './Footer'
 export { default as Feature } from './Feature'
 export { default as About } from './About'
 export { default as Testimonials } from './Testimonials'
+export { default as Services } from './Services'

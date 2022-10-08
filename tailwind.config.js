@@ -21,10 +21,10 @@ module.exports = {
 		extend: {
 			colors: {
 				textColor: '#343435',
-				sectionTitleColor: '#3b5998',
+				sectionTitleColor: '#B81513',
 				linkColor: '#2542aa',
 				buttonColor: '#F5F5F5',
-				buttonBgColor: '#2542aa',
+				buttonBgColor: '#B81513',
 				buttonBgColorDark: 'hsl(226.9, 64.3%, 36.5%)',
 			},
 		},

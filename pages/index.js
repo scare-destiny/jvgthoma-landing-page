@@ -9,6 +9,7 @@ import {
 	SectionTitle,
 	About,
 	Testimonials,
+	Services,
 	Footer,
 } from '../components/index.js'
 import image from '../public/solar-plant.jpg'
@@ -32,32 +33,32 @@ export default function Home() {
 					<div className='w-full border-box  pl-2 pr-2 '>
 						<div className='mx-auto max-w-xl'>
 							<div className='wrapper break-words text-center text-textColor '>
-								<h2 className='text-2xl  '>
+								<h2 className='text-4xl font-bold tracking-tight  sm:text-5xl  '>
 									<strong>Make Profit with your own Solar Module Production Line</strong>
 								</h2>
 							</div>
 						</div>
 					</div>
-					<Form buttonText='Jetzt anmelden und Community-Bundle kostenlos erhalten 🍿' />
+					<Form buttonText='Sign Up Now 🍿' />
 					<Divider />
 					<Features />
-					<Divider />
+
 					<Hero image={image} width='1200' height='634' />
-					<Divider />
-					<Divider />
+					<Services />
 					{/* <CookieBanner/> */}
-					<SectionTitle
+					{/* <SectionTitle
 						text='Starte jetzt 🙌
 '
-					/>
-					<About
+					/> */}
+					{/* <About
 						sectionTitle='Über uns 👇'
 						headingTitle='Wir helfen Software-Unternehmen mit ihrer Community zu skalieren
 '
-					/>
+					/> */}
 					<Testimonials />
-					<Heading text='Lade dir jetzt das Community-Bundle kostenlos herunter' />
-					<Form buttonText='Jetzt anmelden und Community-Bundle kostenlos erhalten 🍿' />
+					<Divider />
+					<Heading text='Make Profit with your own Solar Module Production Line' />
+					<Form buttonText='Sign Up Now 🍿' />
 				</div>
 			</main>
 			<Footer />

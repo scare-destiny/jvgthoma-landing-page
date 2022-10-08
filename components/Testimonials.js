@@ -1,7 +1,7 @@
 const Testimonials = () => {
 	return (
 		<section className='bg' id='referenzen'>
-			<div className='px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8'>
+			<div className='px-4 py-8 mx-auto max-w-screen-2xl sm:px-6 lg:px-8'>
 				<div className='items-end sm:flex justify-center text-center'>
 					<div className='max-w-xl'>
 						<h2 className='text-4xl font-bold tracking-tight  sm:text-5xl'>
@@ -14,8 +14,8 @@ const Testimonials = () => {
 					</div>
 				</div>
 
-				<div className='mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2'>
-					<blockquote className='flex flex-col justify-between h-full p-12 bg-white'>
+				<div className='mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2'>
+					<blockquote className='flex flex-col justify-between h-full p-6 bg-white'>
 						<div>
 							<div className='flex space-x-0.5 text-green-500'>
 								<svg
@@ -75,7 +75,7 @@ const Testimonials = () => {
 						<footer className='mt-8 text-gray-500'>Veronika L</footer>
 					</blockquote>
 
-					<blockquote className='flex flex-col justify-between h-full p-12 bg-white'>
+					<blockquote className='flex flex-col justify-between h-full p-6 bg-white'>
 						<div>
 							<div className='flex space-x-0.5 text-green-500'>
 								<svg
@@ -135,7 +135,7 @@ const Testimonials = () => {
 						<footer className='mt-8 text-gray-500'>Petra Perle</footer>
 					</blockquote>
 
-					<blockquote className='flex flex-col justify-between h-full p-12 bg-white'>
+					<blockquote className='flex flex-col justify-between h-full p-6 bg-white'>
 						<div>
 							<div className='flex space-x-0.5 text-green-500'>
 								<svg
@@ -196,7 +196,7 @@ const Testimonials = () => {
 						<footer className='mt-8 text-gray-500'>Julia K.</footer>
 					</blockquote>
 
-					<blockquote className='flex flex-col justify-between h-full p-12 bg-white'>
+					<blockquote className='flex flex-col justify-between h-full p-6 bg-white'>
 						<div>
 							<div className='flex space-x-0.5 text-green-500'>
 								<svg
