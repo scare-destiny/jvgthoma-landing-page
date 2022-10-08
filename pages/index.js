@@ -22,10 +22,18 @@ export default function Home() {
 			<main className='w-full '>
 				<Hero image={image} width='1200' height='634' priority />
 				<div className='content'>
-					<Heading
-						text='Mit diesen Vorlagen haben wir unsere Community auf 2.500 aktive Mitglieder
-					in nur 6 Monaten skaliert'
-					/>
+					<div className='w-full border-box pt-6 pl-4 pr-4 pb-2'>
+						<div className='mx-auto max-w-xl'>
+							<div className='wrapper break-words text-center text-textColor '>
+								<h2 className='text-3xl  '>
+									<strong>
+										"Mit diesen Vorlagen haben wir unsere Community auf 2.500 aktive
+										Mitglieder in nur 6 Monaten skaliert"
+									</strong>
+								</h2>
+							</div>
+						</div>
+					</div>
 					<Form buttonText='Jetzt anmelden und Community-Bundle kostenlos erhalten 🍿' />
 					<Divider />
 					<Features />
