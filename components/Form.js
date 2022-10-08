@@ -24,7 +24,7 @@ const Form = ({ buttonText }) => {
 								<div>
 									<div className='wrapper max-w-md sm:max-w-xl w-full md:max-w-3xl lg:max-w-4xl text-center'>
 										<h4 className='text-l'></h4>
-										Join our free E-Course and learn how to build our own high profitable
+										Join our free E-Course and learn how to build your own high profitable
 										solar modules production line. <strong>It&apos;s free! </strong>
 									</div>
 								</div>
