@@ -30,9 +30,13 @@ export default function Home() {
 	useEffect(() => {
 		if (inView) {
 			control.start('visible')
-		} else {
-			control.start('hidden')
 		}
+		{
+			/* later enable conditional fadein based on oberserver */
+		}
+		// else {
+		// 	control.start('hidden')
+		// }
 	}, [control, inView])
 
 	return (
@@ -74,7 +78,7 @@ export default function Home() {
 							initial='hidden'
 							animate={control}
 						>
-							<Form buttonText='Sign Up Now 🍿' />
+							<Form buttonText='Sign Up Now ' />
 						</motion.div>
 						<Divider />
 						<Features />
@@ -84,11 +88,10 @@ export default function Home() {
 						<Testimonials />
 						<Divider />
 						<Heading text='Make Profit with your own Solar Module Production Line' />
-						<Form buttonText='Sign Up Now 🍿' />
+						<Form buttonText='Sign Up Now ' />
 					</div>
 				</main>
 				<Footer />
-				<Box />
 			</div>
 		</>
 	)

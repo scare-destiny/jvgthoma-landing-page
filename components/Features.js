@@ -26,14 +26,16 @@ const Features = () => {
 						<Feature
 							icon='😀'
 							strongText='
-							Our turnkey production is flexibel for all types and all sizes. '
-							text=' Also high flexibel for panel size.'
+							Our turnkey production is flexible for all types and all sizes. '
+							text=' Also highly flexible for panel size.'
 						/>
 						<Feature
 							icon='😀'
 							strongText='
-Getestete Community Akquise-Strategien: '
-							text=' Erhalte alle Akquise-Strategien die du brauchst um neue Mitglieder für deine Community über organische Werbung zu gewinnen.'
+							We teach you step by step how to invest in solar module production '
+							text='No knowledge needed, we are your partner for the whole project.
+
+							'
 						/>
 					</div>
 				</div>

@@ -1,19 +1,18 @@
+import { SectionTitle } from '../components/index'
+
 const Testimonials = () => {
 	return (
 		<section className='bg' id='referenzen'>
-			<div className='px-4 py-8 mx-auto max-w-screen-2xl sm:px-6 lg:px-8'>
+			<div className='px-2 py-6 mx-auto max-w-screen-2xl sm:px-6 lg:px-8'>
 				<div className='items-end sm:flex justify-center text-center'>
 					<div className='max-w-xl'>
 						<h2 className='text-4xl font-bold tracking-tight  sm:text-5xl'>
-							Das sagen unsere Kusnden
+							What Our Customers Say
 						</h2>
-
-						<p className='max-w-lg mt-8 text-500'>
-							Am besten lässt man andere über sich sprechen
-						</p>
+						{/* 
+						<SectionTitle text='	Am besten lässt man andere über sich sprechen' /> */}
 					</div>
 				</div>
-
 				<div className='mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2'>
 					<blockquote className='flex flex-col justify-between h-full p-6 bg-white'>
 						<div>
@@ -61,18 +60,19 @@ const Testimonials = () => {
 							</div>
 
 							<div className='mt-4'>
-								<h5 className='text-xl font-bold text-pink-600 sm:text-2xl'>
-									Mein Pony und ich sind sehr happy damit!
+								<h5 className='text-xl font-bold text-textColor sm:text-2xl'>
+									Patrick Answered Every Question I Had
 								</h5>
 
 								<p className='mt-4 text-gray-600'>
-									Super Sattel! Mein Pony und ich sind sehr happy damit! Danke auch an
-									Sonja für die tolle Beratung!
+									For me solar business was completely new, so I had to get the full
+									picture of this business. Patrick never gave me the feeling that my
+									questions are stupid and I got an answer to every problem.
 								</p>
 							</div>
 						</div>
 
-						<footer className='mt-8 text-gray-500'>Veronika L</footer>
+						<footer className='mt-8 text-gray-500'>Mohammed S.</footer>
 					</blockquote>
 
 					<blockquote className='flex flex-col justify-between h-full p-6 bg-white'>
@@ -121,18 +121,18 @@ const Testimonials = () => {
 							</div>
 
 							<div className='mt-4'>
-								<h5 className='text-xl font-bold text-pink-600 sm:text-2xl'>
-									Wir fühlen uns extrem wohl damit!
+								<h5 className='text-xl font-bold text-textColor sm:text-2xl'>
+									Quality service. Quality products. Quality people.
 								</h5>
 
 								<p className='mt-4 text-gray-600'>
-									Super Beratung, top Sattel für Reiter und Pferd! Wir fühlen uns extrem
-									wohl damit!!!
+									I had a great experience with the company doing business and i would do
+									business again with them.
 								</p>
 							</div>
 						</div>
 
-						<footer className='mt-8 text-gray-500'>Petra Perle</footer>
+						<footer className='mt-8 text-gray-500'>Juan Manuel Mora</footer>
 					</blockquote>
 
 					<blockquote className='flex flex-col justify-between h-full p-6 bg-white'>
@@ -181,19 +181,18 @@ const Testimonials = () => {
 							</div>
 
 							<div className='mt-4'>
-								<h5 className='text-xl font-bold text-pink-600 sm:text-2xl'>
-									Meine Stute läuft so viel lockerer.
+								<h5 className='text-xl font-bold text-textColor sm:text-2xl'>
+									VERY DETAILED INFORMATION
 								</h5>
 
 								<p className='mt-4 text-gray-600'>
-									Tolles Sattelkonzept, hochwertige Ausführung. Meine Stute läuft so viel
-									lockerer und ich bin absolut begeistert von der
-									Fender-/Steigbügelausführung.
+									The information was very detailed and I got answers to every question I
+									had. I liked the direct WhatsApp support. Thanks a lot!!!
 								</p>
 							</div>
 						</div>
 
-						<footer className='mt-8 text-gray-500'>Julia K.</footer>
+						<footer className='mt-8 text-gray-500'>Tirdat Hofmann</footer>
 					</blockquote>
 
 					<blockquote className='flex flex-col justify-between h-full p-6 bg-white'>
@@ -242,21 +241,21 @@ const Testimonials = () => {
 							</div>
 
 							<div className='mt-4'>
-								<h5 className='text-xl font-bold text-pink-600 sm:text-2xl'>
-									Nach 10 Jahren Sattelsuche wurde mir ein Sattelkonzept vorgestellt, was
-									mich überzeugt
+								<h5 className='text-xl font-bold text-textColor sm:text-2xl'>
+									Place to go for partnership, turn-key production factory and for any
+									quality solar installations
 								</h5>
 
 								<p className='mt-4 text-gray-600'>
-									Nach 10 Jahren Sattelsuche wurde mir ein Sattelkonzept vorgestellt, was
-									mich überzeugt. Es war ein entspannter, kompetenter und netter Termin.
-									Auf jede Frage bekam ich eine Antwort die das Fachwissen
-									wiederspiegelte, ohne dabei überheblich zu erscheinen.
+									J.v.G technology is a company to trust with their tech know how and
+									with their first class High Tech Equipments, Quality Experienced
+									professionals is a place to go for partnership, turn-key production
+									factory and for any quality solar installations
 								</p>
 							</div>
 						</div>
 
-						<footer className='mt-8 text-gray-500'>Birgit Engler</footer>
+						<footer className='mt-8 text-gray-500'>Uzoma Samson</footer>
 					</blockquote>
 				</div>
 			</div>

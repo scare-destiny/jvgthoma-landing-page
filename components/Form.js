@@ -48,7 +48,7 @@ const Form = ({ buttonText }) => {
 		appearance-none font-light focus:outline-none focus:bg-gray-50 rounded-none
 		 border-black/10 rounded-t-lg pl-[70px] svelte-1ruxt0u'
 									type='text'
-									placeholder='Dein Vorname'
+									placeholder='Your Name'
 								/>
 								{errors.name && <Notification message={errors.name.message} />}
 							</div>
@@ -73,7 +73,7 @@ const Form = ({ buttonText }) => {
 		appearance-none font-light focus:outline-none focus:bg-gray-50 rounded-none
 		 border-black/10 rounded-t-lg pl-[70px] svelte-1ruxt0u'
 									type='text'
-									placeholder='Deine E-mail Adresse'
+									placeholder='Your E-mail Address'
 								/>
 								{errors.mail && <Notification message={errors.mail.message} />}
 							</div>
@@ -99,7 +99,7 @@ const Form = ({ buttonText }) => {
 									<div className='w-full border-box pt-4 pl-5 pr-4 pb-4'>
 										<div className='mx-auto max-w-md sm:max-w-xl w-full md:max-w-3xl lg:max-w-4xl text-left'>
 											<h4 className='text-black font-extralight leading-5 text-sm break-words'>
-												Ich akzeptiere die Datenschutzbestimmungen
+												I accept the Privacy Policy
 											</h4>
 										</div>
 									</div>
@@ -114,7 +114,7 @@ const Form = ({ buttonText }) => {
 						</form>
 						<div className='w-full border-box pt-6 pl-8 pr-8 pb-2 mx-auto max-w-md sm:max-w-xl  md:max-w-4xl lg:max-w-5xl'>
 							<div className='break-words text-center'>
-								<h4>Deine Daten werden sicher &amp; verschlüsselt übertragen 🔐</h4>
+								<h4>Your data will be securely encrypted and transmitted 🔐</h4>
 							</div>
 						</div>
 					</div>
