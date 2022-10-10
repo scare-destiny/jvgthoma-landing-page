@@ -85,7 +85,7 @@ const Form = ({ buttonText }) => {
 										{...register('checkbox', {
 											required: 'Please tickle a checkbox',
 										})}
-										className='accent-blue-800 focus:accent-blue-800 w-5 h-5'
+										className='accent-red-500 focus:accent-red-800 w-5 h-5 default:border-rose-600'
 									/>
 								</div>
 								<style jsx>{`
