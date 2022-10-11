@@ -1,5 +1,3 @@
-import { SectionTitle } from '../components/index'
-
 const Testimonials = () => {
 	return (
 		<section className='bg' id='referenzen'>
@@ -9,8 +7,6 @@ const Testimonials = () => {
 						<h2 className='text-4xl font-bold tracking-tight  sm:text-5xl'>
 							What Our Customers Say
 						</h2>
-						{/* 
-						<SectionTitle text='	Am besten lässt man andere über sich sprechen' /> */}
 					</div>
 				</div>
 				<div className='mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2'>

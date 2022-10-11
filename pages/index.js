@@ -80,7 +80,6 @@ export default function Home() {
 						<Features />
 						<Hero image={image} width='1200' height='634' />
 						<Services />
-						{/* <CookieBanner/> */}
 						<Testimonials />
 						<Divider />
 						<Heading text='Make Profit with your own Solar Module Production Line' />
