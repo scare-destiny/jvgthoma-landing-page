@@ -7,13 +7,9 @@ import {
 	Heading,
 	Form,
 	Divider,
-	CookieBanner,
 	Features,
-	SectionTitle,
-	About,
 	Testimonials,
 	Services,
-	Box,
 	Footer,
 } from '../components/index.js'
 import image from '../public/solar-plant.jpg'
