@@ -13,8 +13,8 @@ import {
 	CookieBanner,
 	Footer,
 } from '../components/index.js'
-import image from '../public/solar-plant.jpg'
-import heroImage from '../public/hero-image.jpg'
+import image from '../public/solar-plant.webp'
+import heroImage from '../public/hero-image.webp'
 
 const fadeIn = {
 	visible: { opacity: 1, scale: 1, transition: { duration: 1.1 } },
