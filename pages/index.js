@@ -48,7 +48,7 @@ export default function Home() {
 			<div>
 				<main className='w-full'>
 					<motion.div ref={ref} variants={fadeIn} initial='hidden' animate={control}>
-						<Hero image={heroImage} width='1200' height='634' priority='true' />
+						<Hero image={heroImage} width='608' height='321' priority='true' />
 					</motion.div>
 
 					<div className='w-full border-box  pl-2 pr-2 '>
@@ -75,7 +75,7 @@ export default function Home() {
 						</motion.div>
 						<Divider />
 						<Features />
-						<Hero image={image} width='1200' height='634' />
+						<Hero image={image} width='608' height='321' />
 						<Services />
 						<Testimonials />
 						<Divider />
