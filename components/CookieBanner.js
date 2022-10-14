@@ -21,7 +21,6 @@ import {
 	AccordionIcon,
 } from '@chakra-ui/react'
 import Cookies from 'js-cookie'
-
 import NextLink from 'next/link'
 
 const CookieBanner = ({ modalHeader, modalText }) => {
@@ -32,7 +31,7 @@ const CookieBanner = ({ modalHeader, modalText }) => {
 		}
 	}, [])
 
-	const { acceptAllCookies, declineAllCookies, acceptCookies, declineCookies } =
+	const { acceptAllCookies, declineAllCookies, acceptCookies } =
 		useCookieConsentContext()
 	const { consent } = useCookieConsentContext()
 
@@ -95,7 +94,6 @@ const CookieBanner = ({ modalHeader, modalText }) => {
 				{overlay}
 				<ModalContent ref={initialRef}>
 					<ModalHeader>{modalHeader}</ModalHeader>
-
 					<ModalBody>
 						<Text size='sm' py={2}>
 							{modalText}
@@ -152,11 +150,7 @@ const CookieBanner = ({ modalHeader, modalText }) => {
 											</Flex>
 										</AccordionButton>
 									</h2>
-									<AccordionPanel pb={4}>
-										{`Third-party cookies ${
-											consent.thirdParty ? 'approved' : 'rejected'
-										}`}
-									</AccordionPanel>
+									<AccordionPanel pb={4}></AccordionPanel>
 								</AccordionItem>
 							</Accordion>
 						</HStack>
