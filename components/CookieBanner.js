@@ -90,10 +90,6 @@ const CookieBanner = ({ modalHeader, modalText }) => {
 	const [overlay, setOverlay] = useState(<OverlayOne />)
 	return (
 		<>
-			<Button colorScheme='red' onClick={() => onOpen()}>
-				Open Modal
-			</Button>
-
 			<Modal
 				size='sm'
 				isOpen={isOpen}
@@ -183,7 +179,6 @@ const CookieBanner = ({ modalHeader, modalText }) => {
 					{/* </ModalFooter> */}
 				</ModalContent>
 			</Modal>
-
 		</>
 	)
 }
