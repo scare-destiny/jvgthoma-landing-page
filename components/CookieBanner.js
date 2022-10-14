@@ -24,12 +24,12 @@ import Cookies from 'js-cookie'
 import NextLink from 'next/link'
 
 const CookieBanner = ({ modalHeader, modalText }) => {
-	useEffect(() => {
-		console.log('test!!')
-		if (!isClientConsentCookieExists()) {
-			onOpen()
-		}
-	}, [])
+	// useEffect(() => {
+	// 	console.log('test!!')
+	// 	if (!isClientConsentCookieExists()) {
+	// 		onOpen()
+	// 	}
+	// }, [])
 
 	const { acceptAllCookies, declineAllCookies, acceptCookies } =
 		useCookieConsentContext()
