@@ -5,10 +5,8 @@ import {
 	ModalOverlay,
 	ModalContent,
 	ModalHeader,
-	ModalFooter,
 	Text,
 	ModalBody,
-	ModalCloseButton,
 	Link,
 	useDisclosure,
 	Button,
@@ -21,18 +19,12 @@ import {
 	AccordionButton,
 	AccordionPanel,
 	AccordionIcon,
-	Box,
-	Container,
 } from '@chakra-ui/react'
 import Cookies from 'js-cookie'
 
 import NextLink from 'next/link'
 
-/// TODO BUILD CUSTOM HOOK FOR COOKIES
-// USEEFFECT ON INITIAL RENDER TO SET NECESSARY COOKIES TO TRUE
-
 const CookieBanner = ({ modalHeader, modalText }) => {
-	// Set neccessary cookies to true on page mount
 	useEffect(() => {
 		if (!isClientConsentCookieExists()) {
 			onOpen()
@@ -169,8 +161,6 @@ const CookieBanner = ({ modalHeader, modalText }) => {
 							</Accordion>
 						</HStack>
 					</ModalBody>
-
-					{/* <ModalFooter justify='center'> */}
 					<VStack alignItems='center' pb='2'>
 						<Button w='90%' colorScheme='red' mr={3} onClick={handleAllCookies}>
 							Accept All
@@ -179,7 +169,6 @@ const CookieBanner = ({ modalHeader, modalText }) => {
 							Only Necessary
 						</Button>
 					</VStack>
-					{/* </ModalFooter> */}
 				</ModalContent>
 			</Modal>
 		</>
