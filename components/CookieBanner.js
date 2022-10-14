@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useCookieConsentContext } from '@use-cookie-consent/react'
 import {
 	Modal,
@@ -45,6 +45,8 @@ const CookieBanner = ({ modalHeader, modalText }) => {
 	const { consent } = useCookieConsentContext()
 
 	const { isOpen, onOpen, onClose } = useDisclosure()
+
+	const initialRef = useRef(null)
 
 	const generateClientConsentCookie = () => {
 		if (!isClientConsentCookieExists()) {
@@ -99,7 +101,7 @@ const CookieBanner = ({ modalHeader, modalText }) => {
 				initialFocusRef={initialRef}
 			>
 				{overlay}
-				<ModalContent>
+				<ModalContent ref={initialRef}>
 					<ModalHeader>{modalHeader}</ModalHeader>
 
 					<ModalBody>
