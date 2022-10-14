@@ -1,35 +1,190 @@
+import { useState, useEffect } from 'react'
 import { useCookieConsentContext } from '@use-cookie-consent/react'
+import {
+	Modal,
+	ModalOverlay,
+	ModalContent,
+	ModalHeader,
+	ModalFooter,
+	Text,
+	ModalBody,
+	ModalCloseButton,
+	Link,
+	useDisclosure,
+	Button,
+	Flex,
+	HStack,
+	VStack,
+	Switch,
+	Accordion,
+	AccordionItem,
+	AccordionButton,
+	AccordionPanel,
+	AccordionIcon,
+	Box,
+	Container,
+} from '@chakra-ui/react'
+import Cookies from 'js-cookie'
 
-const CookieBanner = () => {
-	const { acceptAllCookies, declineAllCookies, acceptCookies } =
+import NextLink from 'next/link'
+
+/// TODO BUILD CUSTOM HOOK FOR COOKIES
+// USEEFFECT ON INITIAL RENDER TO SET NECESSARY COOKIES TO TRUE
+
+const CookieBanner = ({ modalHeader, modalText }) => {
+	// Set neccessary cookies to true on page mount
+	useEffect(() => {
+		if (!isClientConsentCookieExists()) {
+			onOpen()
+			console.log(consent)
+		}
+	}, [])
+
+	const { acceptAllCookies, declineAllCookies, acceptCookies, declineCookies } =
 		useCookieConsentContext()
 	const { consent } = useCookieConsentContext()
 
-	return (
-		<div>
-			<div>
-				<button onClick={acceptAllCookies}>Accept all</button>
-				<button onClick={() => acceptCookies({ thirdParty: true })}>
-					Accept third-party
-				</button>
-				<button onClick={() => acceptCookies({ firstParty: true })}>
-					Accept first-party
-				</button>
-				<button onClick={declineAllCookies}>Reject all</button>
-			</div>
+	const { isOpen, onOpen, onClose } = useDisclosure()
 
-			<div>
-				<button onClick={declineAllCookies}>Decline all cookies</button>
-			</div>
-			<div>
-				<div>
-					{`Third-party cookies ${consent.thirdParty ? 'approved' : 'rejected'}`}
-				</div>
-				<div>
-					{`First-party cookies ${consent.firstParty ? 'approved' : 'rejected'}`}
-				</div>
-			</div>
-		</div>
+	const generateClientConsentCookie = () => {
+		if (!isClientConsentCookieExists()) {
+			Cookies.set('COOKIE_CONSENT_PERMISSION', 'true')
+		}
+	}
+
+	const isClientConsentCookieExists = () => {
+		if (Cookies.get('COOKIE_CONSENT_PERMISSION')) {
+			return true
+		}
+		return false
+	}
+
+	const toggleMarketingCookies = () => {
+		// setCheckedAll(!thirdPartyCookiesChecked)
+		!consent.thirdParty
+			? acceptCookies({ thirdParty: true })
+			: acceptCookies({ thirdParty: false })
+	}
+
+	const handleAllCookies = () => {
+		acceptAllCookies()
+		onClose()
+		generateClientConsentCookie()
+	}
+
+	const handleAllCookiesDecline = () => {
+		declineAllCookies()
+		acceptCookies({ necessary: true })
+		onClose()
+		generateClientConsentCookie()
+	}
+
+	const OverlayOne = () => (
+		<ModalOverlay
+			bg='rgba(0, 0, 0, 0.2)'
+			backdropFilter='auto'
+			backdropInvert='10%'
+			backdropBlur='2px'
+		/>
+	)
+	const [overlay, setOverlay] = useState(<OverlayOne />)
+	return (
+		<>
+			<Button colorScheme='red' onClick={() => onOpen()}>
+				Open Modal
+			</Button>
+
+			<Modal
+				size='sm'
+				isOpen={isOpen}
+				closeOnOverlayClick={false}
+				isCentered
+				blockScrollOnMount={false}
+			>
+				{overlay}
+				<ModalContent>
+					<ModalHeader>{modalHeader}</ModalHeader>
+
+					<ModalBody>
+						<Text size='sm' py={2}>
+							{modalText}
+						</Text>
+						<Flex gap={2}>
+							<NextLink href='/home' passHref>
+								<Link style={{ textDecoration: 'underline' }}>Impressum</Link>
+							</NextLink>
+							<NextLink href='/home' passHref>
+								<Link style={{ textDecoration: 'underline' }}>Datenschutz</Link>
+							</NextLink>
+							<NextLink href='/home' passHref>
+								<Link style={{ textDecoration: 'underline' }}>Cookie Richtlinien</Link>
+							</NextLink>
+						</Flex>
+						<HStack spacing={8}>
+							<Accordion pt='4' allowToggle w='100%'>
+								<AccordionItem>
+									<h2>
+										<AccordionButton>
+											<Flex alignItems='center' textAlign='left'>
+												<AccordionIcon />
+												Necessary Cookies
+												<Switch
+													isDisabled
+													isChecked
+													float='right'
+													colorScheme='red'
+													pos='absolute'
+													left='60'
+												></Switch>
+											</Flex>
+										</AccordionButton>
+									</h2>
+									<AccordionPanel pb={4}></AccordionPanel>
+								</AccordionItem>
+							</Accordion>
+						</HStack>
+						<HStack spacing={8}>
+							<Accordion allowToggle w='100%'>
+								<AccordionItem>
+									<h2>
+										<AccordionButton>
+											<Flex alignItems='center' textAlign='left'>
+												<AccordionIcon />
+												Third party cookies
+												<Switch
+													float='right'
+													colorScheme='red'
+													pos='absolute'
+													left='60'
+													onChange={() => toggleMarketingCookies()}
+												></Switch>
+											</Flex>
+										</AccordionButton>
+									</h2>
+									<AccordionPanel pb={4}>
+										{`Third-party cookies ${
+											consent.thirdParty ? 'approved' : 'rejected'
+										}`}
+									</AccordionPanel>
+								</AccordionItem>
+							</Accordion>
+						</HStack>
+					</ModalBody>
+
+					{/* <ModalFooter justify='center'> */}
+					<VStack alignItems='center' pb='2'>
+						<Button w='90%' colorScheme='red' mr={3} onClick={handleAllCookies}>
+							Accept All
+						</Button>
+						<Button w='90%' variant='ghost' onClick={handleAllCookiesDecline}>
+							Only Necessary
+						</Button>
+					</VStack>
+					{/* </ModalFooter> */}
+				</ModalContent>
+			</Modal>
+
+		</>
 	)
 }
 
