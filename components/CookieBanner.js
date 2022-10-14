@@ -96,6 +96,7 @@ const CookieBanner = ({ modalHeader, modalText }) => {
 				closeOnOverlayClick={false}
 				isCentered
 				blockScrollOnMount={false}
+				initialFocusRef={initialRef}
 			>
 				{overlay}
 				<ModalContent>
