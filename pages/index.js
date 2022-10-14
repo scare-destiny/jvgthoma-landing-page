@@ -14,6 +14,7 @@ import {
 	Footer,
 } from '../components/index.js'
 import image from '../public/solar-plant.jpg'
+import heroImage from '../public/hero-image.jpg'
 
 const fadeIn = {
 	visible: { opacity: 1, scale: 1, transition: { duration: 1.1 } },
@@ -47,12 +48,7 @@ export default function Home() {
 			<div>
 				<main className='w-full'>
 					<motion.div ref={ref} variants={fadeIn} initial='hidden' animate={control}>
-						<Hero
-							image='https://www.pvknowhow.com/wp-content/uploads/2019/08/solar-cell-4045029_1920-e1623041372880.jpg'
-							width='1200'
-							height='634'
-							priority='true'
-						/>
+						<Hero image={heroImage} width='1200' height='634' priority='true' />
 					</motion.div>
 
 					<div className='w-full border-box  pl-2 pr-2 '>

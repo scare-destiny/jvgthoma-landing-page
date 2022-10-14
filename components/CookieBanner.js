@@ -26,9 +26,9 @@ import NextLink from 'next/link'
 
 const CookieBanner = ({ modalHeader, modalText }) => {
 	useEffect(() => {
+		console.log('test!!')
 		if (!isClientConsentCookieExists()) {
 			onOpen()
-			console.log(consent)
 		}
 	}, [])
 

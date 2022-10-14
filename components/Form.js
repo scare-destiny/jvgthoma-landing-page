@@ -54,7 +54,7 @@ const Form = ({ buttonText }) => {
 							</div>
 							<div className='wrapper flex items-center relative box-border overflow-hidden rounded-t-lg'>
 								<u className='absolute no-underline h-[18px] left-6 select-none flex items-center'>
-									<span style={{ 'fontSize': '24px' }}>✉️</span>
+									<span style={{ fontSize: '24px' }}>✉️</span>
 								</u>
 								<div></div>
 								<input
