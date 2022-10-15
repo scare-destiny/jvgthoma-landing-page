@@ -72,15 +72,6 @@ const CookieBanner = ({ modalHeader, modalText }) => {
 		generateClientConsentCookie()
 	}
 
-	const OverlayOne = () => (
-		<ModalOverlay
-			bg='rgba(0, 0, 0, 0.2)'
-			backdropFilter='auto'
-			backdropInvert='10%'
-			backdropBlur='2px'
-		/>
-	)
-	const [overlay, setOverlay] = useState(<OverlayOne />)
 	return (
 		<>
 			<Modal
@@ -91,7 +82,7 @@ const CookieBanner = ({ modalHeader, modalText }) => {
 				blockScrollOnMount={false}
 				initialFocusRef={initialRef}
 			>
-				{overlay}
+				<ModalOverlay />
 				<ModalContent ref={initialRef}>
 					<ModalHeader>{modalHeader}</ModalHeader>
 					<ModalBody>
