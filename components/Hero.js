@@ -9,7 +9,6 @@ const Hero = ({ image, width, height, priority }) => {
 				layout='responsive'
 				width={width}
 				height={height}
-				priority={priority}
 			/>
 		</div>
 	)

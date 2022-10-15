@@ -13,6 +13,7 @@ import {
 	CookieBanner,
 	Footer,
 } from '../components/index.js'
+import Image from 'next/image.js'
 import image from '../public/solar-plant.webp'
 import heroImage from '../public/hero-image.webp'
 
@@ -47,9 +48,16 @@ export default function Home() {
 			{/* TODO Add fadein for all divs*/}
 			<div>
 				<main className='w-full'>
-					<motion.div ref={ref} variants={fadeIn} initial='hidden' animate={control}>
-						<Hero image={heroImage} width='608' height='321' priority='true' />
-					</motion.div>
+					<div className='mx-auto max-w-md sm:max-w-xl w-full md:max-w-3xl py-6  sm:py-6 md:px-20 md:py-10'>
+						<Image
+							src={heroImage}
+							alt='logo'
+							layout='responsive'
+							width={608}
+							height={321}
+							priority={true}
+						/>
+					</div>
 
 					<div className='w-full border-box  pl-2 pr-2 '>
 						<div className='mx-auto max-w-xl'>
@@ -82,10 +90,10 @@ export default function Home() {
 						<Heading text='Make Profit with your own Solar Module Production Line' />
 						<Form buttonText='Sign Up Now ' />
 					</div>
-					{/* <CookieBanner
+					<CookieBanner
 						modalHeader='Cookie Einstellungen'
 						modalText='Wir nutzen Cookies auf unserer Website. Einige von ihnen sind essenziell, während andere uns helfen, diese Website und deine Erfahrung zu verbessern.'
-					/> */}
+					/>
 				</main>
 				<Footer />
 			</div>
