@@ -82,10 +82,10 @@ export default function Home() {
 						<Heading text='Make Profit with your own Solar Module Production Line' />
 						<Form buttonText='Sign Up Now ' />
 					</div>
-					{/* <CookieBanner
+					<CookieBanner
 						modalHeader='Cookie Einstellungen'
 						modalText='Wir nutzen Cookies auf unserer Website. Einige von ihnen sind essenziell, während andere uns helfen, diese Website und deine Erfahrung zu verbessern.'
-					/> */}
+					/>
 				</main>
 				<Footer />
 			</div>
