@@ -18,7 +18,7 @@ import image from '../public/solar-plant.webp'
 import heroImage from '../public/hero-image.webp'
 
 const fadeIn = {
-	visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+	visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
 	hidden: { opacity: 0, scale: 1 },
 }
 
