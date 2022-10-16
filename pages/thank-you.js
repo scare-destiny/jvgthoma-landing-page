@@ -26,9 +26,11 @@ const DynamicConfetti = dynamic(() => import('react-confetti'), {
 const ThankYou = () => {
 	const { width, height } = useWindowSize()
 	const [run, setRun] = useState(true)
+	const [numberOfPieces, setNumberOfPieces] = useState(200)
 
 	useEffect(() => {
-		setTimeout(() => setRun(false), 10000)
+		setTimeout(() => setNumberOfPieces(0), 3000)
+		setTimeout(() => setRun(false), 7000)
 	}, [])
 
 	return (
@@ -37,7 +39,7 @@ const ThankYou = () => {
 				<DynamicConfetti
 					width={width}
 					height={height}
-					numberOfPieces={20}
+					numberOfPieces={numberOfPieces}
 					run={run}
 				/>
 			</Suspense>
@@ -47,7 +49,7 @@ const ThankYou = () => {
 				<SectionTitle text='Super! Dein Bundle wird gleich per Email an dich versendet 🦄' />
 				<Heading text='Du möchtest wissen, wie du mit einer Community treue Fans gewinnst?' />
 				<div className='w-full border-box pt-2 pl-4 pr-4 pb-10mx-auto max-w-md sm:max-w-xl md:max-w-3xl lg:max-w-4xl text-center'>
-					<Hero image={image} />
+					<Hero image={image} priority={true} />
 					<Banner
 						heading='	Understand User Flow.'
 						strongHeading='			Increase Conversion.'
