@@ -3,17 +3,6 @@ import Button from './Button'
 import Notification from './Notification'
 
 const Form = ({ buttonText }) => {
-	const {
-		handleSubmit,
-		register,
-		formState: { errors },
-	} = useForm()
-
-	const onSubmit = async (data) => {
-		const fields = { fields: data }
-		console.log(fields)
-	}
-
 	return (
 		<>
 			<div className='formContainer w-full border-box pt-4 pl-6 pr-6 pb-4'>
@@ -30,61 +19,36 @@ const Form = ({ buttonText }) => {
 								</div>
 							</div>
 						</div>
-						<form onSubmit={handleSubmit(onSubmit)} className='sm:mt-2 max-w-2xl  '>
+						<form
+							method='POST'
+							action='https://ingbrohansthoma.activehosted.com/proc.php'
+							id='_form_121_'
+							class='_form _form_121 _inline-form  _dark'
+							className='sm:mt-2 max-w-2xl'
+						>
 							<div className='wrapper flex items-center relative box-border overflow-hidden rounded-t-lg'>
 								<u className='absolute no-underline h-[18px] left-6 select-none flex items-center'>
 									<span style={{ fontSize: '24px' }}>👋</span>
 								</u>
-								<div></div>
 								<input
-									id='name'
-									{...register('name', {
-										required: 'Please share your name',
-										minLength: { value: 4, message: 'Minimum length should be 4' },
-									})}
+									type='text'
+									id='email'
+									name='email'
+									required
 									className='input 
 		placeholder-gray-400 box-border w-full h-[64px] px-6 border-0 border-l border-r border-t mb-0 
 		font-ui text-base align-middle bg-white transition 
 		appearance-none font-light focus:outline-none focus:bg-gray-50 rounded-none
 		 border-black/10 rounded-t-lg pl-[70px] svelte-1ruxt0u'
-									type='text'
-									placeholder='Your Name'
-								/>
-								{errors.name && <Notification message={errors.name.message} />}
-							</div>
-							<div className='wrapper flex items-center relative box-border overflow-hidden rounded-t-lg'>
-								<u className='absolute no-underline h-[18px] left-6 select-none flex items-center'>
-									<span style={{ fontSize: '24px' }}>✉️</span>
-								</u>
-								<div></div>
-								<input
-									id='mail'
-									{...register('mail', {
-										required: 'Email address is required',
-										minlength: { value: 4, message: 'Minimum lenght should be 4' },
-										pattern: {
-											value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-											message: 'Provide valid email address',
-										},
-									})}
-									className='input 
-		placeholder-gray-400 box-border w-full h-[64px] px-6 border-0 border-l border-r border-t mb-0 
-		font-ui text-base align-middle bg-white transition 
-		appearance-none font-light focus:outline-none focus:bg-gray-50 rounded-none
-		 border-black/10 rounded-t-lg pl-[70px] svelte-1ruxt0u'
-									type='text'
 									placeholder='Your E-mail Address'
 								/>
-								{errors.mail && <Notification message={errors.mail.message} />}
 							</div>
 							<div className='wrapper checkbox flex items-center px-6 min-h-[68px] relative box-border overflow-hidden bg-white border-t border-l border-r border-b rounded-b-lg border-black/10'>
 								<div className='checkbox undefined' style={{ width: '24px' }}>
 									<input
 										type='checkbox'
+										required
 										name='checkbox'
-										{...register('checkbox', {
-											required: 'Please tickle a checkbox',
-										})}
 										className='accent-red-500 focus:accent-red-800 w-5 h-5 default:border-rose-600'
 									/>
 								</div>
@@ -95,20 +59,28 @@ const Form = ({ buttonText }) => {
 										color: #0bb648;
 									}
 								`}</style>
+
 								<div className='text'>
 									<div className='w-full border-box pt-4 pl-5 pr-4 pb-4'>
 										<div className='mx-auto max-w-md sm:max-w-xl w-full md:max-w-3xl lg:max-w-4xl text-left'>
 											<h4 className='text-black font-extralight leading-5 text-sm break-words'>
 												I accept the Privacy Policy
 											</h4>
+											<input type='hidden' name='u' value='121' />
+											<input type='hidden' name='f' value='121' />
+											<input type='hidden' name='s' />
+											<input type='hidden' name='c' value='0' />
+											<input type='hidden' name='m' value='0' />
+											<input type='hidden' name='act' value='sub' />
+											<input type='hidden' name='v' value='2' />
+											<input
+												type='hidden'
+												name='or'
+												value='995ac286ea3b29a058eaf0af6bcece89'
+											/>
 										</div>
 									</div>
 								</div>
-								{errors.checkbox && (
-									<div className='mb-3  text-sm text-red-500'>
-										{/* { TODO  mark checkbox red on error errors.checkbox.message} */}
-									</div>
-								)}
 							</div>
 							<Button buttonText={buttonText} />
 						</form>
