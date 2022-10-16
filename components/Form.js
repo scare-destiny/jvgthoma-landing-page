@@ -21,8 +21,7 @@ const Form = ({ buttonText }) => {
 							method='POST'
 							action='https://ingbrohansthoma.activehosted.com/proc.php'
 							id='_form_121_'
-							class='_form _form_121 _inline-form  _dark'
-							className='sm:mt-2 max-w-2xl'
+							className='sm:mt-2 max-w-2xl _form _form_121 _inline-form  _dark'
 						>
 							<div className='wrapper flex items-center relative box-border overflow-hidden rounded-t-lg'>
 								<u className='absolute no-underline h-[18px] left-6 select-none flex items-center'>

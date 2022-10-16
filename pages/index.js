@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
+import dynamic from 'next/dynamic'
 import {
 	Hero,
 	Heading,
 	Form,
 	Divider,
 	Features,
-	Testimonials,
 	Services,
 	CookieBanner,
 	Footer,
@@ -21,6 +21,13 @@ const fadeIn = {
 	visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
 	hidden: { opacity: 0, scale: 1 },
 }
+
+const DynamicTestimonials = dynamic(
+	() => import('../components/Testimonials'),
+	{
+		suspense: true,
+	}
+)
 
 export default function Home() {
 	const control = useAnimation()
@@ -85,7 +92,7 @@ export default function Home() {
 						<Features />
 						<Hero image={image} width='608' height='321' />
 						<Services />
-						<Testimonials />
+						<DynamicTestimonials />
 						<Divider />
 						<Heading text='Make Profit with your own Solar Module Production Line' />
 						<Form buttonText='Sign Up Now ' />
@@ -100,5 +107,3 @@ export default function Home() {
 		</>
 	)
 }
-
-
