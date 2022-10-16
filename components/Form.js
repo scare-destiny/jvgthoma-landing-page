@@ -29,7 +29,7 @@ const Form = ({ buttonText }) => {
 									<span style={{ fontSize: '24px' }}>👋</span>
 								</u>
 								<input
-									type='text'
+									type='email'
 									id='email'
 									name='email'
 									required
