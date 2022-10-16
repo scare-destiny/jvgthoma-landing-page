@@ -1,6 +1,4 @@
-import { useForm } from 'react-hook-form'
 import Button from './Button'
-import Notification from './Notification'
 
 const Form = ({ buttonText }) => {
 	return (
