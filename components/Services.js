@@ -1,5 +1,5 @@
 import Heading from './Heading'
-import Button from './Button'
+import Button from './ButtonComponent'
 
 const Services = () => {
 	return (

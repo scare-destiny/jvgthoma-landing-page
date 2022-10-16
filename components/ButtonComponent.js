@@ -1,4 +1,4 @@
-const Button = ({ buttonText }) => {
+const ButtonComponent = ({ buttonText }) => {
 	return (
 		<div className='mx-auto max-w-xl  sm:max-w-xl w-full mt-4'>
 			<button
@@ -18,4 +18,4 @@ const Button = ({ buttonText }) => {
 	)
 }
 
-export default Button
+export default ButtonComponent
