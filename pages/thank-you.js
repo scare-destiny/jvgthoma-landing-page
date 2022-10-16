@@ -67,6 +67,7 @@ const ThankYou = () => {
 						<Button mt={4} colorScheme='red' type='submit'>
 							Submit
 						</Button>
+						<button className='shake_button'>testik</button>
 					</FormControl>
 					{/* <Button buttonText='Sign Up Now 🍿' /> */}
 					<Features />
