@@ -5,6 +5,7 @@ import {
 	ButtonComponent,
 	Features,
 	Banner,
+	ShakingButton,
 } from '../components/index'
 import { useState, useEffect } from 'react'
 import {
@@ -46,31 +47,33 @@ const ThankYou = () => {
 
 			{/* <Confetti width={width} height={height} numberOfPieces={50} /> */}
 			<div className=' border-box pt-6 pl-2 pr-2 pb-6 mx-auto max-w-md sm:max-w-xl w-full md:max-w-3xl lg:max-w-4xl'>
-				<SectionTitle text='Super! Dein Bundle wird gleich per Email an dich versendet 🦄' />
-				<Heading text='Du möchtest wissen, wie du mit einer Community treue Fans gewinnst?' />
+				{/* <SectionTitle
+					text='Thank you for your request! Your course will be emailed to you right away ⚡️
+'
+				/> */}
+				<Heading text='Thank you for your request! Your course will be emailed to you right away ⚡️' />
 				<div className='w-full border-box pt-2 pl-4 pr-4 pb-10mx-auto max-w-md sm:max-w-xl md:max-w-3xl lg:max-w-4xl text-center'>
 					<Hero image={image} priority={true} />
 					<Banner
-						heading='	Understand User Flow.'
-						strongHeading='			Increase Conversion.'
-						text='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!'
-						buttonText='	Get Started'
-						secondButtonText='Learn More'
+						heading='	Ready To Start?'
+						strongHeading='			 Send Us Request Right Now.'
+						// text='Tailor-made services and high-level performance made for you.'
+						buttonText='Send Request'
+						formLabelText='The solar industry offers many opportunities and right now it makes
+						extremely good sense to enter the solar production sector - in fact,
+						chances have never been better!'
+						placeholder='Hello, I need a complete solar plant for 4Mw... '
 					/>
-					<FormControl py={4}>
-						<FormLabel>Schau dir jetzt das Video an und erfahre mehr:</FormLabel>
-						<Textarea
-							placeholder='Here is a sample placeholder'
-							focusBorderColor='blue.300'
-						/>
-						<FormHelperText>Select only if you&apos;re a fan.</FormHelperText>
-						<Button mt={4} colorScheme='red' type='submit'>
-							Submit
-						</Button>
-						<button className='shake_button'>testik</button>
-					</FormControl>
-					{/* <Button buttonText='Sign Up Now 🍿' /> */}
+
 					<Features />
+					<Banner
+						heading='	Still Not Sure?'
+						strongHeading='			 Let Us Know.'
+						// text='Tailor-made services and high-level performance made for you.'
+						buttonText='Send My Question'
+						formLabelText="We'll answer all your questions!"
+						placeholder='I want to start a solar module production line, but need help and expertise...'
+					/>
 				</div>
 			</div>
 		</div>

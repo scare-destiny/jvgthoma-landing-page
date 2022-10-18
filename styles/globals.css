@@ -32,7 +32,7 @@ a {
 
 
 .shake_button {
-  animation: shake 5.82s cubic-bezier(.36, .07, .19, .97) both infinite;
+  animation: shake 15.82s cubic-bezier(.36, .07, .19, .97) both infinite;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;

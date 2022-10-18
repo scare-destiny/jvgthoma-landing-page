@@ -1,9 +1,21 @@
+import {
+	FormControl,
+	FormLabel,
+	FormErrorMessage,
+	FormHelperText,
+	Textarea,
+	Button,
+} from '@chakra-ui/react'
+
+import ShakingButton from './ShakingButton'
 const Banner = ({
 	heading,
 	strongHeading,
 	text,
 	buttonText,
 	secondButtonText,
+	formLabelText,
+	placeholder,
 }) => {
 	return (
 		<section>
@@ -16,25 +28,20 @@ const Banner = ({
 						</strong>
 					</h1>
 
-					<p className='mt-4 sm:text-xl sm:leading-relaxed'>{text}</p>
-
-					{/* <div className='mt-8 flex flex-wrap justify-center gap-4'>
-						<a
-							className='block w-full rounded bg-buttonBgColor px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto'
-							href='/get-started'
-						>
-							{buttonText}
-						</a>
-
-						<a
-							className='block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto'
-							href='/about'
-						>
-							{secondButtonText}
-						</a>
-					</div> */}
+					<p className=' sm:text-xl sm:leading-relaxed'>{text}</p>
 				</div>
 			</div>
+			<FormControl py={1}>
+				<Textarea
+					placeholder={placeholder}
+					focusBorderColor='blue.300'
+					isRequired
+				/>
+				<ShakingButton buttonText={buttonText} />
+				<FormLabel py={2} textAlign='center'>
+					{formLabelText}
+				</FormLabel>
+			</FormControl>
 		</section>
 	)
 }

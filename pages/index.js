@@ -10,7 +10,6 @@ import {
 	Divider,
 	Features,
 	Services,
-	CookieBanner,
 	Footer,
 } from '../components/index.js'
 import Image from 'next/image.js'
