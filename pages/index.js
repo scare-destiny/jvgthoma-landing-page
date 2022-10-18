@@ -97,7 +97,6 @@ export default function Home() {
 						<Form buttonText='Sign Up Now ' />
 					</div>
 				</main>
-				<Footer />
 			</div>
 		</>
 	)

@@ -6,8 +6,9 @@ import {
 	Textarea,
 	Button,
 } from '@chakra-ui/react'
-
+import { useForm } from 'react-hook-form'
 import ShakingButton from './ShakingButton'
+
 const Banner = ({
 	heading,
 	strongHeading,
@@ -17,6 +18,12 @@ const Banner = ({
 	formLabelText,
 	placeholder,
 }) => {
+	const {
+		handleSubmit,
+		register,
+		formState: { errors, isSubmitting },
+	} = useForm()
+
 	return (
 		<section>
 			<div className='mx-auto max-w-screen-xl px-4 py-4  lg:items-center'>
