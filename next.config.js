@@ -9,6 +9,7 @@ const nextConfig = {
 			'www.pvknowhow.com',
 		],
 	},
+	basePath: '/landing',
 }
 
 module.exports = nextConfig
